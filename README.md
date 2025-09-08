@@ -43,7 +43,7 @@ wget -qO- https://tech.biko.pub/resource/rpi-replace-apt-source-buster.sh | sudo
 import cv2
 from ultralytics import YOLO
 from cv2 import getTickCount, getTickFrequency
-# 加载 YOLOv8 模型
+# 加载 YOLOv8 模型（pt格式）
 model = YOLO("best.pt") # 这里选择你训练的模型
 # 获取摄像头内容，参数 0 表示使用默认的摄像头
 cap = cv2.VideoCapture(0)
@@ -84,7 +84,7 @@ Model.predict(source=0,show=True)
 import cv2
 from ultralytics import YOLO
 from cv2 import getTickCount, getTickFrequency
-# 加载 YOLOv8 模型
+# 加载 YOLOv8 模型（NCNN格式）
 ncnn_model = YOLO("./best_ncnn_model")
  
 # 获取摄像头内容，参数 0 表示使用默认的摄像头
@@ -125,7 +125,7 @@ cv2.destroyAllWindows()  # 关闭OpenCV窗口
 import cv2
 from ultralytics import YOLO
 from cv2 import getTickCount, getTickFrequency
-# 加载 YOLOv8 模型
+# 加载 YOLOv8 模型（ONNX格式）
 model = YOLO("best.onnx")
  
 # 获取摄像头内容，参数 0 表示使用默认的摄像头
